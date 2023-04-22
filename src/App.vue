@@ -1,17 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!--
+    <BlackCat imagen="cat1.jpg"/> 
+    <BlackCat imagen="cat2.jpg"/> 
+    <BlackCat imagen="cat3.jpg"/> 
+    -->
+    <ul>
+      <RouterLink destino="black-cat-1"/>
+      <RouterLink destino="black-cat-2"/>
+      <RouterLink destino="black-cat-3"/>
+    </ul>
+    <RouterView/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import RouterLink from './components/RouterLink.vue';
+import RouterView from './components/RouterView.vue';
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    RouterView,
+    RouterLink
   }
 }
 </script>
@@ -23,6 +33,14 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
+
+ul{
+  padding: 0px;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
 </style>
